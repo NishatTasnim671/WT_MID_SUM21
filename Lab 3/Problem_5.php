@@ -1,14 +1,20 @@
 <html>
+<body>
+<table>
 <?php
 $backColor="green"; 
-$fontColor="red";
+$fontColor="red"; 
 $imageWidth="80px"; 
 $imageHeight="80px";
 ?>
-<table>
-<tr>
-<td><img src="AIUB_LOGO.jpg" width="$imageWidth" height="$imageHeight" ></td>
-<td><h2>American International University -Bangladesh</h2><span style="background-color:$backColor;color:$fontColor"></td>
 
-</span>
+<tr>
+			<td><img src="AIUB_logo.jpg" height="<?php echo $imageHeight ?>" Width="<?php echo $imageWidth ?>"></td>
+			<td><h2>American International University -<span style="background-color:<?php echo $backColor?>;color:<?php echo $fontColor ?>">Bangladesh</h2>
+</span>  </td>
+			</tr>
+
+ 
+</table>
+</body>
 </html>
