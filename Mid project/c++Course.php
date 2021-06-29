@@ -1,6 +1,6 @@
 <html>
 <body>
-  <h1>JAVA</h1>
+  <h1>C++</h1>
   <form>
 		<fieldset>
 			<ul>

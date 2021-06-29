@@ -8,12 +8,14 @@
 	$err_paytype="";
 	$bank="";
 	$err_bank="";
+	$amount="";
+	$err_amount="";
 	$transition="";
 	$err_transition="";
 	
 	
 	
-	$ba= array("Brac Bank","Islami Bank","Sonali Bank","Nothing");
+	$ba= array("Brac Bank","Islami Bank","Sonali Bank");
 	
 	
 	
@@ -60,6 +62,22 @@
 			$bank = $_POST["bank"];
 		}
 		
+		if(empty($_POST["amount"])){
+			$hasError = true;
+			$err_amount="Amount Must Required";
+		}
+
+	else if(!is_numeric($_POST["amount"] ))
+	{
+		$hasError=true;
+		$err_amount="amount must be numeric number ";
+
+	}
+	else 
+   {
+	$amount=$_POST["amount"];
+   }
+		
 		if(empty($_POST["transition"])){
 			$hasError = true;
 			$err_transition="Transition id Must Required";
@@ -73,7 +91,7 @@
 	}
 	else 
    {
-	$transition=$_POST["code"];
+	$transition=$_POST["transition"];
    }
 		
 		if(!$hasError){
@@ -82,6 +100,7 @@
           echo $_POST["coursename"]."<br>";
 	      echo $_POST["paytype"]."<br>";
 	      echo $_POST["bank"]."<br>";
+		  echo $_POST["amount"]."<br>";
 	      echo $_POST["transition"]."<br>";
 	      
 	
@@ -126,6 +145,12 @@
 						
 					</td>
 					<td><span> <?php echo $err_bank;?> </span></td>
+				</tr>
+				
+				<tr>
+					<td>Amount</td>
+					<td>: <input type="text" name="amount" > </td>
+					<td><span> <?php echo $err_amount;?> </span></td>
 				</tr>
 				<tr>
 					<td>Transition ID</td>
