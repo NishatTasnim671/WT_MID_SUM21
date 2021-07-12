@@ -8,7 +8,7 @@
 			<center><img  height="200px" width="300px"src ="arts.jpg"></center>
 			<hr>
 			<input type="button" value="Ultimate Guitar Masterclass">
-			<br><input type="button" value="Philosophy">
+			<br><a target="_blank" href="philosophyCourse.php"><input type="button" value="Philosophy"></a>
 			
 	
 		</fieldset>

@@ -2,8 +2,8 @@
 	
 	$name="";
 	$err_name="";
-	$email="";
-	$err_email="";
+	$username="";
+	$err_username="";
 	$code="";
 	$err_code="";
 	$number="";
@@ -38,7 +38,7 @@ if(isset($_POST["submit"])){
 			$hasError = true;
 			$err_username="User name Required";
 		}
-		else if(strlen($_POST["username"]) < 6){
+		else if(strlen($_POST["username"]) <= 6){
 			$hasError = true;
 			$err_username="User Name must contain >6 character";
 		}
@@ -49,22 +49,6 @@ if(isset($_POST["submit"])){
 		else{
 			$username = htmlspecialchars($_POST["username"]);
 			
-		}
-		
-//email
-if(empty($_POST["email"])){
-			$hasError = true;
-			$err_email="Email Required";
-		}
-		
- else if(strpos($_POST["email"],"@.")){
-          $hasError=true;
-			     $err_email="Email must contain @ and .";
-		     }
-		
-		
-		else{
-			$email = $_POST["email"];
 		}
 		
 		//phone
@@ -137,12 +121,12 @@ if(empty($_POST["email"])){
 		}
 		if(!$hasError){
 			echo "<h1>Edited Profile</h1>";
-			echo $name."<br>";	
+			echo $name."<br>";
+            echo $username."<br>";			
 			echo $street."<br>";
 			echo $city."<br>";
 			echo $state."<br>";
 			echo $postal."<br>";
-			echo $email."<br>";
 			echo $Code."<br>";
 			echo $number."<br>";
 	}
@@ -165,9 +149,9 @@ if(empty($_POST["email"])){
 				</tr>
 				
 				<tr>
-					<td>Email</td>
-					<td>: <input type="text" name="email" value="<?php echo $email; ?>"placeholder="Insert Your Email">  </td>
-					<td><span> <?php echo $err_email;?> </span></td>
+					<td>User Name</td>
+					<td>: <input type="text" name="username" value="<?php echo $username; ?>"placeholder="User name..">  </td>
+					<td><span> <?php echo $err_username;?> </span></td>
 				</tr>
 				<tr>
 					<td>Phone</td>

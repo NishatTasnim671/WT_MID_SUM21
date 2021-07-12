@@ -29,9 +29,8 @@
 					  <li>Video:Joining Tables</li>
 					</ul>
 			   </ol>
-			  <li>Assessment </li>
-			  <li>Notes</li>
-			  <li>Course Info</li>
+			  <li><a target="_blank" href="assessment.php"> Assessment</a> </li>
+			  <li><a target="_blank" href="note.php"> Notes</a></li>
 			</ul>
 			
 		</fieldset>

@@ -27,8 +27,8 @@
 					  <li>Video: Loops</li>
 					</ul>
 			   </ol>
-			  <li>Result </li>
-			  <li>Notes</li>
+			  <li><a target="_blank" href="assessment.php"> Assessment</a> </li>
+			  <li><a target="_blank" href="note.php"> Notes</a></li>
 			  <li>Course Info</li>
 			</ul>
 			

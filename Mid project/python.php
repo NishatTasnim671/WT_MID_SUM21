@@ -16,6 +16,6 @@
     <center><p>Discount: </p></center>
     <center><p>Discount Price :</p></center>
 	<center><p><b>Entroll</b></p></center>
-	<center><input type="button" name="Go to Course" value="Go to Course"></center>
+	<center><a target="_blank" href="pythonCourse.php"><input type="button" name="Go to Course" value="Go to Course"></a></center>
     </body>
 </html>
